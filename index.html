@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+            integrity= 
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+        <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity= 
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+    <script src="calculator.js"></script>
+    <style>
+        .calculator {
+  border: 1px solid rgba(0, 0, 0, 0.621);
+  border-radius: 0.375rem;
+  width: 190px;
+  height: 280px;
+  font-family: Arial, sans-serif;
+  margin: 120px auto;
+  padding: 80px;
+}
+
+.result {
+  border: 1px solid #000000;
+  border-radius: 0.375rem;
+  height: 50px;
+  width: 250px;
+  margin-bottom: 30px;
+  margin-top: -50px;
+  margin-left: -35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.result {
+  font-size: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-left: -38px;
+  margin-top: -20px;
+}
+
+button {
+  border: none;
+  border-radius: 0.375rem;
+  padding: 23px;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 28px;
+ 
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+.bg-green {
+  background-color: rgba(0, 177, 29, 0.651);
+  color: white;
+}
+
+.bg-green:hover {
+  background-color: rgba(0, 231, 39, 0.651);
+  color: white;
+}
+
+.bg-red {
+  background-color: rgba(223, 4, 4, 0.651);
+  color: white;
+}
+
+.bg-red:hover {
+  background-color: rgba(255, 1, 1, 0.651);
+  color: white;
+}
+    </style>
+
+</head>
+<body>
+
+    <div class="calculator" id="calcu">
+        
+            <input type="text" id="result" class="result">
+   
+        <div class="buttons">
+          <button onclick="btn1('1')" onkeydown="my_calculation(event)" value="1">1</button>
+          <button onclick="btn1('2')" onkeydown="my_calculation(event)" value="2">2</button>
+          <button onclick="btn1('3')" onkeydown="my_calculation(event)" value="3">3</button>
+          <button onclick="btn1('+')" onkeydown="my_calculation(event)" value="+">+</button>
+          <button onclick="btn1('4')" onkeydown="my_calculation(event)" value="4">4</button>
+          <button onclick="btn1('5')" onkeydown="my_calculation(event)" value="5">5</button>
+          <button onclick="btn1('6')" onkeydown="my_calculation(event)" value="6">6</button>
+          <button onclick="btn1('-')" onkeydown="my_calculation(event)" value="-">-</button>
+          <button onclick="btn1('7')" onkeydown="my_calculation(event)" value="7">7</button>
+          <button onclick="btn1('8')" onkeydown="my_calculation(event)" value="8">8</button>
+          <button onclick="btn1('9')" onkeydown="my_calculation(event)" value="9">9</button>
+          <button onclick="btn1('*')" onkeydown="my_calculation(event)" value="*">*</button>
+          <button class="bg-red" onclick="clr()"  value="c">C</button>
+          <button onclick="btn1('0')" onkeydown="my_calculation(event)" value="0">0</button>
+          <button class="bg-green" onclick="solve()" value="=">=</button>
+          <button onclick="btn1('/')" onkeydown="my_calculation(event)" value="/">/</button>
+        </div>
+      </div>
+      
+    
+</body>
+</html>
